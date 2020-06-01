@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computer Guess Number</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body style="text-align: center;">
+        <div id="header">
+            <a href="compguess.html">Computer Guessing Game</a> | 
+            <a href="function.html">Function Testing</a> | 
+            <a href="reaction.html">Reaction Game</a> | 
+            <a href="java3.html">Java Testing 1</a> | 
+            <a href="javascript.html">Java Testing 2</a> | 
+            <a href="javascript2.html">Java Testing 3</a>
+
+
+        </div>
+        
+        <p>How many fingers are you holding up?</p>
+
+        <p><input type="text" id="myNumber"></p>
+
+        <button id="guess">Guess!</button>
+        <div id="guesses"></div>
+        <div id="finished"></div>
+        <script type="text/javascript">
+
+            document.getElementById('guess').onclick = function() {
+
+                var cGuess = Math.floor((Math.random() * 6));
+                
+                var pGuess = document.getElementById("myNumber").value;
+                
+                if (pGuess > 5 ) {
+                    return alert("That number is not part of this game!");
+                } 
+                if (isNaN(pGuess)) {
+                    return alert("You didn't enter a number from 0 to 5.");
+                }
+
+                document.getElementById('guesses').innerHTML = "";
+                var i = 0;
+                document.getElementById('guesses').innerHTML = document.getElementById('guesses').innerHTML + cGuess + "<br />"
+                i++;
+                while (cGuess != pGuess) {
+                    cGuess = Math.floor((Math.random() * 6));
+                    document.getElementById('guesses').innerHTML = document.getElementById('guesses').innerHTML + cGuess + "<br />";
+                    i++;
+                }
+                
+                document.getElementById('finished').innerHTML = "<p>I guessed your number, " + pGuess + " in " + i + " guesses.</p>";
+            }
+        
+        </script>
+
+
+
+
+    </body>
+
+
+</html>

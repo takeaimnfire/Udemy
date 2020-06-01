@@ -1,0 +1,122 @@
+<!DOCTYPE Html>
+<html>
+
+	<head>
+	
+		<title>Javascript 2</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="compguess.html">Computer Guessing Game</a> | 
+            <a href="function.html">Function Testing</a> | 
+            <a href="reaction.html">Reaction Game</a> | 
+            <a href="java3.html">Java Testing 1</a> | 
+            <a href="javascript.html">Java Testing 2</a> | 
+            <a href="javascript2.html">Java Testing 3</a>
+
+
+        </div><br /><br />
+	
+		<input type="text" id="newText"><button id="change">Change the text.</button>
+	
+		<p id="test">This is some text to test.</p>
+		
+		<p>What is the magic word?</p>
+		
+		<input type="text" id="word"><button id="wordTest">Submit Answer</button>
+		
+		<p>How many fingers am I holding up?</p>
+		
+		<input type="text" id="fingerGuess"><button id="fingers">Submit Guess</button>
+		
+
+		<p>Enter a tweet</p>
+
+		<input type="text" id="tweet"> <button id="subTweet">Tweet</button>
+		
+		<p id="newTweet"><div id="tTweet"></div></p>
+		<p id="allTweets"></p>
+		<p>Past tweets</p>
+		<p id="pastTweets"></p>
+		<script type="text/javascript">
+			
+			document.getElementById("change").onclick = function() {
+				var x = document.getElementById("newText").value;
+				document.getElementById("test").innerHTML = x;
+			}
+			
+			var myArray = new Array();
+			
+			myArray[0] = "pizza";
+			myArray[1] = "chocolate";
+			myArray[2] = "pepperoni";
+			
+			console.log(myArray);
+			
+			var tweets = ["Morning all!", "Coffee is great"];
+			
+			tweets.push("Back to work.");
+			
+			tweets.splice(1, 0, "Cornflakes for Breakfast.");
+			var j=0;
+			while (j < tweets.length) {
+				document.getElementById("allTweets").innerHTML = document.getElementById("allTweets").innerHTML + tweets[j] + "<br />";
+				j++
+			}
+			
+			console.log(tweets);
+			
+			
+			var magicWord = "Please";
+			
+			document.getElementById("wordTest").onclick = function() {
+				
+				var answer = document.getElementById("word").value;
+				
+				if (answer == magicWord) {
+					alert("Correct!");
+				} else {
+					alert("That is incorrect!");
+				}
+			}
+			
+			document.getElementById("fingers").onclick = function() {
+				
+				var numFingers = Math.floor((Math.random() * 6));
+				
+							
+				var numGuess = document.getElementById("fingerGuess").value;
+				
+				if (numGuess == numFingers) {
+					alert("Wow, you guess correctly! " + numFingers);
+				} else {
+					alert("EEHHH!! Try again. It was " + numFingers);
+				}
+				
+			}
+			
+			document.getElementById("subTweet").onclick = function() {
+				var newTweet = document.getElementById("tweet").value;
+				
+				var m = tweets.length;
+				tweets[m] = newTweet;
+				document.getElementById("tTweet").innerHTML = document.getElementById("tTweet").innerHTML + "<br />" + tweets[m];
+			}
+
+			var tweets2 = ["Hi Everyone!", "I love pizza!", "Num num..."];
+
+			for (var i=0; i<tweets2.length; i++) {
+				document.getElementById("pastTweets").innerHTML = document.getElementById("pastTweets").innerHTML + "<br />" + tweets2[i];
+			}
+
+
+			
+		</script>
+	
+	
+	
+	</body>
+
+</html>

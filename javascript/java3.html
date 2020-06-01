@@ -1,0 +1,116 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>
+            Javascript 3
+
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="compguess.html">Computer Guessing Game</a> | 
+            <a href="function.html">Function Testing</a> | 
+            <a href="reaction.html">Reaction Game</a> | 
+            <a href="java3.html">Java Testing 1</a> | 
+            <a href="javascript.html">Java Testing 2</a> | 
+            <a href="javascript2.html">Java Testing 3</a>
+
+
+        </div>
+        <div id="tweetsDiv"></div>
+        <p id="errorMessage">Error: </p>
+        <p id="message"></p>
+        
+        <script type="text/Javascript">
+        
+            var tweetString = "";
+
+            var tweets = ["Good Morning", "Good evening", "Good night"];
+
+            for (var i=0; i < tweets.length; i++) {
+
+                tweetString = tweetString + "<p>" + tweets[i] + "</p>";
+
+            }
+        
+            document.getElementById("tweetsDiv").innerHTML = tweetString;
+        
+        </script>
+
+        <script type="text/javascript">
+            
+            function Sum(val1, val2) {
+                return val1 + val2;
+            }
+            
+            try {
+                var result = Sum(10,20);
+                document.getElementById('message').innerHTML = result;
+            }
+            catch(ex) {
+                document.getElementById('errorMessage').innerHTML = ex;
+            }
+            
+        </script>
+
+        <script type="text/javascript">
+            function Person() {
+                this.firstName = "";
+                this.lastName = "";
+                this.getFullName = function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+                var person1 = new Person();
+                person1.firstName = "Luke";
+                person1.lastName = "Copson";
+
+                var person2 = new Person();
+                person2.firstName = "Dave";
+                person2.lastName = "Gusek";
+
+                alert(person1.getFullName());
+                alert(person2.getFullName());
+
+                testClass = function(name) {
+                    document.write ("Instantiating testClass<br />");
+                    this.name = name;
+                };
+
+                testClass.prototype.report = function() {
+                    document.write ("I'm " + this.name + "<br />");
+                    return 1;
+                };
+
+                testClass.prototype.testMethod = function(param) {
+                    document.write ("Running testMethod with parameter value " + param + "<br />");
+                    return 2;
+                }; // notice that there is no semicolon here
+
+                (function() {
+                    document.write ("Running self-invoking function<br />");
+                    return 3;
+                }());
+
+                if (typeof(testClass.prototype.testMethod) !== "function") {
+                    document.write ("testMethod type: " + typeof(testClass.prototype.testMethod));
+                    document.write (", value: " + testClass.prototype.testMethod + "<br />");
+                }
+                var testOb = new testClass("Bill");
+                testOb.report();
+                testOb.testMethod(4);
+                
+                var person3 = new Person()
+                person3.firstName = "Test";
+                person3.lastName = "last";
+                alert(person3.getFullName());
+            
+        </script>
+
+
+    </body>
+
+
+</html>

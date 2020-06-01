@@ -1,0 +1,59 @@
+#iButtons {
+
+    height: 75px;
+    width: 75px;
+    background-color: red;
+    border-radius: 50%;
+    display: none;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    
+}
+
+#header {
+    background: black;
+    color: white;
+    font-size: 120%;
+    font-family: Arial;
+    text-align: center;
+}
+
+#header a, #header a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#header a:active, #header a:hover {
+    color: yellowgreen;
+    text-decoration: underline;
+}
+
+.circles {
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 50px;
+}
+
+#red-circle {
+    background-color: red;
+}
+
+#blue-circle {
+    background-color: blue;
+}
+
+#yellow-circle {
+    background-color: yellow;
+}

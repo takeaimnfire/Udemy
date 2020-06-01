@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Javascript</title>
+		
+		<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="compguess.html">Computer Guessing Game</a> | 
+            <a href="function.html">Function Testing</a> | 
+            <a href="reaction.html">Reaction Game</a> | 
+            <a href="java3.html">Java Testing 1</a> | 
+            <a href="javascript.html">Java Testing 2</a> | 
+            <a href="javascript2.html">Java Testing 3</a>
+
+
+        </div>
+		
+		<button onclick="tChange()">Click Me!</button>
+		<p id="text">Testing text.</p>
+		<button id="test2">Test 2</button>
+		
+		<p id="appendText">Text to append to.</p>
+		
+		<button id="appendButton">Click to Append.</button>
+		
+		<p id="moreText">Some more text to test.</p>
+		
+		<button id="styleText">Style the Text.</button>
+		
+		<div class="circles" id="disappear"></div>
+		
+		<button id="circles">Disappear!</button><br /><br />
+		
+		<div class="circle" id="red-circle"></div>
+		
+		<div class="circle" id="blue-circle"></div>
+		
+		<div class="circle" id="yellow-circle"></div>
+		
+		<script type="text/javascript">
+		
+			// One line comment
+			
+			/* Multi-line comment */
+			
+			function tChange() {
+				document.getElementById("text").innerHTML = "Changed text.";
+			}
+			
+			document.getElementById("test2").onclick = function() {
+				alert('Second button clicked.');
+			}
+			
+			document.getElementById('appendButton').onclick = function() {
+				document.getElementById('appendText').innerHTML = document.getElementById('appendText').innerHTML + "appended text.";
+			}
+			
+			document.getElementById("styleText").onclick = function() {
+				document.getElementById("moreText").style.color = "red";
+				document.getElementById("moreText").style.fontSize = "150%";
+				if (document.getElementById("moreText").style.display == "none") {
+					document.getElementById("moreText").style.display = "block";
+				} else { document.getElementById("moreText").style.display = "none" }
+			}
+			
+			document.getElementById("circles").onclick = function() {
+				if (document.getElementById("disappear").style.display == "none") {
+					document.getElementById("disappear").style.display = "block";
+					document.getElementById("circles").innerHTML = "Disappear";
+				} else { 
+					document.getElementById("disappear").style.display = "none";
+					document.getElementById("circles").innerHTML = "Reappear";
+				}
+			}
+			
+			document.getElementById("red-circle").onclick = function() {
+				document.getElementById("red-circle").style.display = "none";
+			}
+			
+			document.getElementById("blue-circle").onclick = function() {
+				document.getElementById("blue-circle").style.display = "none";
+			}
+			
+			document.getElementById("yellow-circle").onclick = function() {
+				document.getElementById("yellow-circle").style.display = "none";
+			}
+			
+		</script>
+		
+	</body>
+
+</html>

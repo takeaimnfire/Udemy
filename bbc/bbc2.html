@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Technology - BBC News</title>
+	
+		<link rel="shortcut icon" href="images/bbc_ico.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+		<style type="text/css">
+			/* I am a comment */
+			#topbar {
+				width: 1250px;
+				margin: 0 auto;
+				height: 40px;
+				font-family: Yu Gothic;
+				font-weight: 800;
+				font-size: 80%;
+			}
+			
+			
+			
+			
+			#topbar a, #topbar a:visited {
+				color:black;
+				text-decoration: dotted;
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+			
+			}
+			
+			#bbc-logo {
+				margin-top: 5px;
+				width: 90px;
+				float: left;
+				margin-right: 1%;
+			}
+			
+			.topbar-section {
+				float: left;
+				border-left: 1px lightgrey solid;
+				height: 100%;
+			}
+			
+			#signin-img {
+				height: 25px;
+				margin-left: 15px;
+				margin-top: 5px;
+			}
+			
+			#sign-in-text {
+				
+			}
+			
+			#signin:hover {
+				border-bottom: 4px solid skyblue;
+			}
+			
+			#home:hover {
+				border-bottom: 4px solid black;
+			}
+			
+			#news:hover {
+				border-bottom: 4px solid #bb1919;
+			}
+			
+			#sport:hover {
+				border-bottom: 4px solid gold;
+			}
+			
+			#reel:hover {
+				border-bottom: 4px solid blue;
+			}
+			
+			#work:hover {
+				border-bottom: 4px solid darkblue;
+			}
+			
+			#travel:hover {
+				border-bottom: 4px solid green;
+			}
+			
+			#work:hover {
+				border-bottom: 4px solid darkblue;
+			}
+			
+			#future:hover {
+				border-bottom: 4px solid black;
+			}
+			
+			#culture:hover {
+				border-bottom: 4px solid purple;
+			}
+			
+			#more:hover {
+				border-bottom: 4px solid black;
+			}
+			
+			#more {
+				border-bottom: 0px;
+			}
+			
+			.nav-header {
+				background-color: #bb1919;
+				color: white;
+				height: 95px;
+				width: 100%;
+				font-style: Calibri Light;
+				margin: 0 auto;
+				border: 0px;
+				position: static;
+				padding: 0px;
+				margin-top: 0px;
+				z-index: 2;
+			}
+			
+			.clear-float {
+				clear: both;
+			}
+			
+			.clear-float-left {
+				clear: left;
+			}
+
+			
+			#moreDIV {
+			  background-color: white;
+			  height: 55px;
+			  transition: max-height 0.2s ease-out;
+			  border: .5px solid #9999ff;
+			  display: none;
+			  z-index: 1;
+			  position: static;
+			}
+			
+			
+			::placeholder {
+				
+				color:black;
+				font-family: Yu Gothic;
+				font-weight: bolder;
+				font-size: 90%;
+				margin-left: 5px;
+				padding: 4px;
+			}
+			
+			input:focus::placeholder {
+				color: grey;
+				font-family: Yu Gothic;
+				font-weight: bolder;
+				font-size: 90%;
+			}
+			
+			#orb-search-button {
+				border: 0px;
+				background-color: lightgrey;
+				height: 22px;
+				margin-left: 0px;
+				margin-top: 10px;
+			}
+			
+			.more-head {
+				width: 1250px;
+				margin: 0 auto;
+				font-family: Yu Gothic;
+				font-weight: 800;
+				font-size: 80%;
+			}
+			
+			.more-head a, .more-head a.visited {
+				color: black;
+				text-decoration: none;
+				border: 0px;
+				background-color: white;
+				padding: 5px;
+				padding-right: 50%;
+			}
+			.more-head a:hover, .more-head a.active {
+				color: white;
+				text-decoration: none;
+				border: 0px;
+				background-color: #404040;
+				padding: 5px;
+				padding-right: 50%;
+			}
+			
+			.nav-header-inner {
+				color: white;
+				background-color: inherit;
+				text-align: left;
+				width: 1250px;
+				height: 60px;
+				margin: 0 auto;
+				font-family: 'Gill Sans MT';
+			}
+			
+			.nav-linkbar {
+				color: white;
+				background-color: inherit;
+				text-align: left;
+				width: 1250px;
+				height: 35px;
+				margin: 0 auto;
+				font-family: 'Calibri';
+				font-size: 100%;
+				font-weight: 500;
+				z-index: 2;
+				
+			}
+			
+			.nav-header a, .nav-header a:visited {
+				text-decoration: none;
+				color: white;
+			}
+			
+			.nav-header a:hover, .nav-header a:active {
+				text-decoration: none;
+				color: white;
+				margin-bottom: 0px;
+				border-bottom: 4px solid white;
+				border-width: 100%;
+			}
+			
+			.navbar-section {
+				float: left;
+				border-left: 1px lightgrey solid;
+				height: 50%;
+				opacity: 30%;
+				margin-top: 10px; 
+			}
+			
+			#more-link {
+				background-color: inherit;
+				color: white;
+				border: 0px;
+				text-align: left;
+			}
+			
+			
+			
+			#more-link:active, #more-link:hover {
+				background-color: black;
+				color: white;
+				width: 6%;
+				bottom-border: 0px;
+				border: 1px solid #809fff;
+				padding: 0px;
+				padding-top: 5px;
+				text-align: center;
+				float: left;
+				margin: 0px 0px 0px 0px;
+				cursor: pointer;
+			}
+			
+			#newsDIV {
+			  background-color: black;
+			  color: white;
+			  height: 60px;
+			  width: 100%;
+			  transition: max-height 0.2s ease-out;
+			  border: 0;
+			  border-bottom: 5px solid #bb1919;
+			  display: none;
+			  z-index:1;
+			  position: absolute;
+			  margin: 0px;
+			  padding: 0px;
+			}
+			
+			.news-head {
+				width: 1250px;
+				margin: 0 auto;
+				font-family: 'Gill Sans MT';
+				font-weight: 500;
+			}
+			
+			.more-section {
+				float: left;
+				border-left: 1px white solid;
+				height: 30px;
+				opacity: 30%;
+				margin-top: 15px; 
+			}
+			
+			#newsDIV a, #newsDIV a:hover {
+				color: white;
+				text-decoration: none;
+			}
+			
+			#newsDIV a:hover, #newsDIV a:active {
+				background-color: black;
+				color: white;
+				text-decoration: underline;
+				pointer: cursor;
+			}
+			
+			.body-art {
+				width: 1250px;
+				height: 800px;
+				text-align: left;
+				font-family: 'Arial';
+				position: relative;
+				margin: 0 auto;
+			}
+			
+			.body-art-h1 {
+				float: left;
+				margin-top: 10px;
+				border-bottom: 4px solid #bb1919;
+				font-size: 20px;
+				font-weight: 500;
+			}
+			
+			.ad1 {
+				float: left;
+				width: 1200px;
+				
+				margin: 10px;
+				text-align: center;
+			}
+			
+			#ad1 {
+				width: 700px;
+				height: 125px;
+			}
+			
+			.body-art-img {
+				float: left;
+				width: 50%;
+			}
+			
+			#robot-dog {
+				width: 100%;
+			}
+			
+						
+			.body-art-text {
+				float: left;
+				width: 25%;
+				height: 50px;
+				color: #595959;
+				font-family: 'Calibri Light';
+				font-weight: 20%;
+				font-size: 16px;
+				text-align: justify;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#art-link {
+				font-size: 200%;
+				font-weight: 900;
+			}
+			
+			.body-art-text a, .body-art-text a:visited {
+				
+				font-family: Calibri;
+				text-decoration: none;
+				color: black;
+			}
+			
+			.body-art-text a:hover, .body-art-text a:active {
+				text-decoration: underline;
+				color: skyblue;
+			}
+			
+			#art-link a, #art-link a:visited {
+				text-decoration: none;
+				color: black;
+			}
+			
+			.body-art-img2 {
+				float: left;
+				width: 25%;
+			}
+		
+		</style>
+		<script>
+			
+			
+			function myFunction() {
+			  var more = document.getElementById("moreDIV");
+			  var moreL = document.getElementById("more");
+			  if (more.style.display == "none") {
+				more.style.display = "block";
+				moreL.style.borderBottom = "4px solid black";
+			  } else {
+				more.style.display = "none";
+				moreL.style.borderBottom = "0px";
+			  }
+			  
+			}
+			
+			
+			
+			function focus() {
+				var y = document.getElementById("search");
+				y.css.placeholder("color", "grey");
+			}
+			
+			function newsClick() {
+				var x = document.getElementById("newsDIV");
+				var z = document.getElementById("more-link");
+				if (x.style.display == "none") {
+					x.style.display = "block";
+					z.style.border = "1px solid #3366ff";
+					z.style.backgroundColor = "black";
+				} else {
+					x.style.display = "none";
+					z.style.border = "0px";
+					z.style.backgroundColor = "inherit";
+				}
+			
+			}
+			
+			window.onload=function() {
+			  var x = document.getElementById("newsDIV");
+			  var z = document.getElementById("more-link");
+			  var m = document.getElementById("moreDIV");
+			  var n = document.getElementById("more");
+			  
+			  if (x.style.display == "none") {
+				x.style.display = "block";
+				z.style.borderBottom = "1px solid #3366ff";
+				m.style.display = "block";
+				n.style.borderBottom = "4px solid black";
+			  } else {
+				x.style.display = "none";
+				z.style.borderBottom = "0px";
+				m.style.display = "none";
+				n.style.borderBottom = "0px";
+			  }
+			  
+			}
+			  function moreLinkHover() {
+				document.getElementById("more-link").style.backgroundColor = "black";
+			  }
+			  
+			  function moreHover() {
+				document.getElementById("more").style.borderBottom = "4px solid black";
+			  }
+			  
+			  function moreOut() {
+				document.getElementById("more").style.borderBottom = "0px;";
+			  }
+			  
+			  function moreLinkOut() {
+				document.getElementById("more").style.backgroundColor = "inherit";
+			  }
+			
+		</script>	
+		
+		</head>
+		
+	<body>
+	
+		<div id="topbar">
+		
+			<a href="http://www.bbc.com"><img src="images/bbc-logo.gif" id="bbc-logo"></a>
+			
+			<div id="signin-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 14%; height: 35px; float: left; text-align: justify; margin: auto; font-size: 120%;" id="signin"><img src="images/sign-in.png" id="signin-img"> <sup>Sign In</sup></a>
+			
+			<div id="home-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 6%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="home">Home</a>
+			
+			<div id="news-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 6%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="news">News</a>
+			
+			<div id="sport-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 6%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="sport">Sport</a>
+			
+			<div id="reel-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 5%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="reel">Reel</a>
+			
+			<div id="work-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 7%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="work">Worklife</a>
+			
+			<div id="travel-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 7%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="travel">Travel</a>
+			
+			<div id="future-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 7%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="future">Future</a>
+			
+			<div id="culture-div" class="topbar-section"></div>
+			
+			<a href="bbc2.html" style="width: 7%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="culture">Culture</a>
+			
+			<div id="more-div" class="topbar-section"></div>
+						
+			<a href="#" onclick="myFunction()" onmouseover="moreHover()" onmouseout="moreOut();" style="width: 10%; height: 25px; text-align: center; float: left; margin-top: 10px; padding: 0;" id="more">More &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#x25BE;</a>
+						
+			<div id="search-div" class="topbar-section"></div>
+			<div class="search-form">
+			<form method="get" action="#">
+				<input type="search" onfocus="focus()" placeholder="Search" style="background: lightgrey; color: black; border: 0px; width: 12%; height: 22px; float: left; margin-top: 10px; margin-left: 1%;" id="search">
+				<button id="orb-search-button" class="orb-search__button"><img src="images/search.jpg" height="15px" align="center"></button>
+			</form>
+			</div>
+			
+		</div>
+		<div class="clear-float"></div>
+		<div id="moreDIV">
+		  <div class="more-head">
+			<div id="more-title" style="text-align: left; width: 15%; float: left; font-size: 220%; font-weight: 500; height: 40px; margin-top: 5px;">MORE</div>
+			
+			<div id="music" style="text-align: left; width: 18%; float: left; height: 20px; margin-left: 0px; margin-top: 20px;">
+				<a href="bbc2.html" id="music-link">Music</a>
+			</div>
+			
+			<div id="tv" style="text-align: left; width: 18%; float: left; height: 20px; margin-left: 0px; margin-top: 20px;">
+				<a href="bbc2.html" id="tv-link">TV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+			</div>
+			
+			<div id="weather" style="text-align: left; width: 18%; float: left; height: 20px; margin-left: 0px; margin-top: 20px;">
+				<a href="bbc2.html" id="weather-link">Weather</a>
+			</div>
+			
+			<div id="sounds" style="text-align: left; width: 18%; float: left; height: 20px; margin-left: 0px; margin-top: 20px;">
+				<a href="bbc2.html" id="sounds-link">Sounds</a>
+			</div>
+		  </div>
+		</div>
+		<div class="clear-float"></div>
+		<div class="nav-header">
+			<div class="nav-header-inner">
+				<div style="font-size: 45px; font-weight: 500; padding: 0px; margin-top: 5px; float: left;">NEWS</h1></div>
+				<div class="clear-float"></div>
+				<div class="nav-linkbar">
+					<a href="bbc2.html" style="width: 4%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Home</a>
+					<div class="navbar-section" id="home-nav"></div>
+					<a href="bbc2.html" style="width: 8%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Coronavirus</a>
+					<div class="navbar-section" id="corona-nav"></div>
+					<a href="bbc2.html" style="width: 5%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Video</a>
+					<div class="navbar-section" id="video-nav"></div>
+					<a href="bbc2.html" style="width: 5%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">World</a>
+					<div class="navbar-section" id="world-nav"></div>
+					<a href="bbc2.html" style="width: 8%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">US &amp; Canada</a>
+					<div class="navbar-section" id="us-nav"></div>
+					<a href="bbc2.html" style="width: 3%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">UK</a>
+					<div class="navbar-section" id="uk-nav"></div>
+					<a href="bbc2.html" style="width: 6%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Business</a>
+					<div class="navbar-section" id="business-nav"></div>
+					<a href="bbc2.html" style="width: 4%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Tech</a>
+					<div class="navbar-section" id="tech-nav"></div>
+					<a href="bbc2.html" style="width: 5%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Science</a>
+					<div class="navbar-section" id="science-nav"></div>
+					<a href="bbc2.html" style="width: 5%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Stories</a>
+					<div class="navbar-section" id="stories-nav"></div>
+					<a href="bbc2.html" style="width: 13%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Entertainment &amp; Arts</a>
+					<div class="navbar-section" id="ent-nav"></div>
+					<a href="bbc2.html" style="width: 5%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Health</a>
+					<div class="navbar-section" id="health-nav"></div>
+					<a href="bbc2.html" style="width: 7%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">In Pictures</a>
+					<div class="navbar-section" id="in-nav"></div>
+					<a href="bbc2.html" style="width: 8%; height: 25px; float: left; margin-top: 8px; text-align: center; padding: 0px;">Reality Check</a>
+					<div class="navbar-section" id="reality-nav"></div>
+					<button id="more-link" href="#" onclick="newsClick()" onmouseover="moreLinkHover()" onmouseout="moreLinkOut()" style="width: 5%; height: 100%; text-align: center; float: left; margin-top: 3px; padding: 0px;">More &#x25BE;</button>
+				</div>
+			</div>
+		</div>
+			<div class="clear-float"></div>
+				<div id="newsDIV">
+					<div class="news-head">
+											
+						<div id="wnews" style="text-align: left; width: 20%; float: left; height: 20px; margin-left: 0px; margin-top: 20px;">
+							<a href="bbc2.html" id="world-link">World News TV</a>
+						</div>
+						<div class="more-section" id="world-nav"></div>
+						<div id="beat" style="text-align: left; width: 20%; float: left; height: 20px; margin-left: 15px; margin-top: 20px;">
+							<a href="bbc2.html" id="beat-link">Newsbeat</a>
+						</div>
+						<div class="more-section" id="beat-nav"></div>
+						<div id="special" style="text-align: left; width: 20%; float: left; height: 20px; margin-left: 15px; margin-top: 20px;">
+							<a href="bbc2.html" id="special-link">Special Reports</a>
+						</div>
+						<div class="more-section" id="special-nav"></div>
+						<div id="long" style="text-align: left; width: 20%; float: left; height: 20px; margin-left: 15px; margin-top: 20px;">
+							<a href="bbc2.html" id="long-link">Long Reads</a>
+						</div>
+					</div>
+				</div>
+			<div class="clear-float"></div>
+			
+		</div>
+		<div class="clear-float"></div>
+		<div class="body-art">
+			<div class="body-art-h1">
+				
+					Tech
+			
+			</div>
+			
+			<div class="ad1">
+				
+					<img src="images/ad1.png" id="ad1">
+			
+			</div>
+			<div class="clear-float"></div>
+		
+			<div class="body-art-img">
+				
+				<img src="images/robot_dog.jpg" id="robot-dog">
+				<div class="story-one" style="float: left; height: 100px; text-align: justify; margin-top: 25px; margin-right: 15px; width: 47%;">
+					<img src="https://ichef.bbci.co.uk/news/240/cpsprodpb/4016/production/_112360461_gettyimages-1083704790.jpg" class="lazyloaded" alt="pizza" data-src="https://ichef.bbci.co.uk/news/{width}/cpsprodpb/4016/production/_112360461_gettyimages-1083704790.jpg" style="width: 100%;">
+					<br />
+					Man makes money buying own pizza on app.
+				</div>
+				<div class="story-two" style="float: left; height: 100px; text-align: justify; margin-top: 25px; margin-left: 20px; width: 47%;">
+					<img src="https://ichef.bbci.co.uk/news/380/cpsprodpb/E909/production/_112375695_crucible976.jpg" class="lazyloaded" alt="Crucible characters" data-src="https://ichef.bbci.co.uk/news/{width}/cpsprodpb/E909/production/_112375695_crucible976.jpg" style="width: 100%"><br />
+					Man makes money buying own pizza on app.
+				</div>
+			</div>
+			
+			<div class="body-art-text">
+			
+				<div style="text-align: justify; float: left; margin: 5px; height: 400px;">
+				<a href="#" style="text-align: justify;" id="art-link">Click here to go to the main article.</a>
+				<br /> <br />
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra massa massa ultricies mi quis hendrerit dolor. Sem fringilla ut morbi tincidunt augue. Ultrices vitae auctor eu augue ut lectus arcu bibendum at.
+					<ul style="color: black; font-family: Calibri; font-weight: bolder">
+						<li><a href="#">Article 1</a></li>
+						<li><a href="#">Article 2</a></li>
+					</ul>
+				</div>
+				
+				
+			</div>
+			
+			<div class="body-art-img2">
+				
+				<img src="images/ad2.png" id="ad2" style="float: right;">
+			</div>
+			<!--<div class="clear-float-left"></div>-->
+			
+			
+		<div class="clear-float"></div>
+		
+		
+			
+		
+		
+		
+		
+	</body>
+
+</html>

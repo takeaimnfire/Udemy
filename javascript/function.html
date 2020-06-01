@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Testing</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="compguess.html">Computer Guessing Game</a> | 
+            <a href="function.html">Function Testing</a> | 
+            <a href="reaction.html">Reaction Game</a> | 
+            <a href="java3.html">Java Testing 1</a> | 
+            <a href="javascript.html">Java Testing 2</a> | 
+            <a href="javascript2.html">Java Testing 3</a>
+
+
+        </div>
+
+
+    <p>How many fingers are you holding up?</p>
+    <p><input type="text" id="myNumber"></p>
+
+    <button id="guess">Guess!</button>
+
+    <script type="text/javascript">
+
+        document.getElementById('guess').onclick = function() {
+
+            var myNumber = document.getElementById('myNumber').value;
+
+            if (myNumber > 5) {
+                return alert("That number is not part of this game!");
+            }
+
+            function doAGuess(correctAnswer) {
+
+                var guess = Math.random();
+
+                guess = guess * 6;
+
+                guess = Math.floor(guess);
+
+                if (guess == correctAnswer) {
+
+                    return true;
+
+                } else {
+
+                    return false;
+
+                }
+
+            }
+
+            var gotIt = false;
+
+            var numberOfGuesses = 1;
+
+            while (gotIt == false) {
+                
+                if (doAGuess(myNumber) == true) {
+
+                    gotIt = true;
+
+                    alert("Got it! It was a " + myNumber + ". It took me " + numberOfGuesses + " guesses.");
+
+                } else {
+
+                    numberOfGuesses++;
+                }
+            }
+        }
+
+        
+        </script>
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</html>
